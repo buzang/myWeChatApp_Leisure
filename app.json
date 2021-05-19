@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/publish/publish", 
+    "pages/mine/mine", 
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ef1f04",
+    "navigationBarTitleText": "有闲-闲置二手交易",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#ef1f04",
+    "backgroundColor": "",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "主页",
+        "iconPath": "/images/icons/home.png",
+        "selectedIconPath": "/images/icons/home-o.png"
+      },
+      {
+        "pagePath": "pages/publish/publish", 
+        "text": "添加",
+        "iconPath": "/images/icons/add.png",
+        "selectedIconPath": "/images/icons/add-o.png"
+      },
+      {
+        "pagePath": "pages/mine/mine", 
+        "text": "我的",
+        "iconPath": "/images/icons/mime.png",
+        "selectedIconPath": "/images/icons/mime-o.png"
+      }  
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

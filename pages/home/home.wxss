@@ -1,0 +1,23 @@
+.main-box .swiper swiper swiper-item image {
+  width: 100%;
+}
+.main-box scroll-view {
+  margin-top: 10rpx;
+  width: 100%;
+  color: #999;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.main-box scroll-view .scrollview-item {
+  display: inline-block;
+}
+.main-box scroll-view .scrollview-item navigator {
+  float: left;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+.checked {
+  color: black;
+}
