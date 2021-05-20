@@ -1,32 +1,98 @@
 <!--pages/home/home.wxml-->
 <!-- 主体页面 -->
 <view class="main-box">
-  <!-- 搜索栏 -->
-  <view class="searchbar">
-    <mp-searchbar></mp-searchbar>
-  </view>
+
   <!-- 轮播图区域 -->
   <view class="swiper">
     <swiper indicator-dots="true" autoplay="true">
       <swiper-item wx:for="{{swiperList}}" wx:key="swiperImageId">
-        <navigator>
+        <navigator hover-class="btn-hover">
           <image src="../../images/youxian.png" mode="widthFix" />
         </navigator>
       </swiper-item>
     </swiper>
 
   </view>
+  <!-- 搜索栏 -->
+  <view class="searchbar">
+    <mp-searchbar></mp-searchbar>
+  </view>
   <!-- 可滑动分类区 -->
   <scroll-view scroll-x="true" enable-flex="true">
-    <view
-      wx:for="{{scrollViewList}}"
-      wx:key="title_id"
-      class="scrollview-item"
-    >
-      <navigator bind:tap="scrollchecked(title.id)">
+    <view wx:for="{{scrollViewList}}" wx:key="title_id" class="scrollview-item">
+      <!-- hover-class="btn-hover" 清除点击后的阴影效果 -->
+      <navigator bindtap="scrollchecked" data-titleid="{{index}}" hover-class="btn-hover"
+        class="{{item.title_id===scrollCheckedId ?'checked':''}}">
+        <!-- {{scrollCheckedId}} -->
         {{item.title}}
       </navigator>
     </view>
   </scroll-view>
-</view>
+  <!-- 物品视图区 -->
+  <view class="goods">
+    <navigator class="goods_view">
+      <!-- 第一层内容 -->
+      <view class="goods_view_top">
+        <text class="goods_view_top_goodsName">大茶几</text>
+        <text class="goods_view_top_goodsPrice">￥30054</text>
+      </view>
+      <!-- 第二层介绍 -->
+      <view class="goods_view_center">
+        闲置出售，本人没有需求使用了,便宜出
+      </view>
+      <!-- 第三层图片 -->
+      <view class="goods_view_bottom">
+        <image mode="widthFix" src="//gw.alicdn.com/bao/uploaded/i2/2249285408/O1CN01VORgHD1pouZfT2OxK_!!0-item_pic.jpg_320x320q90.jpg_.webp"  />
+        <image mode="widthFix"
+          src="//gw.alicdn.com/bao/uploaded/i1/TB1NKP3GVXXXXXrXpXXXXXXXXXX_!!0-item_pic.jpg_320x320q90.jpg_.webp" />
+        <image mode="widthFix"
+          src="//gw.alicdn.com/bao/uploaded/i1/693865123/O1CNA1doRsgT1niNfNCz7gw_!!693865123-0-psf.jpg_320x320q90.jpg_.webp" />
 
+      </view>
+    </navigator>
+  </view>
+  <view class="goods">
+    <navigator class="goods_view">
+      <!-- 第一层内容 -->
+      <view class="goods_view_top">
+        <text class="goods_view_top_goodsName">闲置餐具，原价5990入的</text>
+        <text class="goods_view_top_goodsPrice">￥30000</text>
+      </view>
+      <!-- 第二层介绍 -->
+      <view class="goods_view_center">
+        闲置出售，本人没有需求使用了,便宜出
+      </view>
+      <!-- 第三层图片 -->
+      <view class="goods_view_bottom">
+        <image mode="widthFix" src="//gw.alicdn.com/bao/uploaded/i2/2249285408/O1CN01VORgHD1pouZfT2OxK_!!0-item_pic.jpg_320x320q90.jpg_.webp"  />
+        <image mode="widthFix"
+          src="//gw.alicdn.com/bao/uploaded/i1/TB1NKP3GVXXXXXrXpXXXXXXXXXX_!!0-item_pic.jpg_320x320q90.jpg_.webp" />
+        <!-- <image mode="widthFix"
+          src="//gw.alicdn.com/bao/uploaded/i1/693865123/O1CNA1doRsgT1niNfNCz7gw_!!693865123-0-psf.jpg_320x320q90.jpg_.webp" /> -->
+
+      </view>
+    </navigator>
+  </view>
+  <view class="goods">
+    <navigator class="goods_view">
+      <!-- 第一层内容 -->
+      <view class="goods_view_top">
+        <text class="goods_view_top_goodsName">大茶几</text>
+        <text class="goods_view_top_goodsPrice">￥30000</text>
+      </view>
+      <!-- 第二层介绍 -->
+      <view class="goods_view_center">
+        闲置出售，本人没有需求使用了,便宜出
+      </view>
+      <!-- 第三层图片 -->
+      <view class="goods_view_bottom">
+        <image mode="widthFix" src="//gw.alicdn.com/bao/uploaded/i2/2249285408/O1CN01VORgHD1pouZfT2OxK_!!0-item_pic.jpg_320x320q90.jpg_.webp"  />
+        <!-- <image mode="widthFix"
+          src="//gw.alicdn.com/bao/uploaded/i1/TB1NKP3GVXXXXXrXpXXXXXXXXXX_!!0-item_pic.jpg_320x320q90.jpg_.webp" />
+        <image mode="widthFix"
+          src="//gw.alicdn.com/bao/uploaded/i1/693865123/O1CNA1doRsgT1niNfNCz7gw_!!693865123-0-psf.jpg_320x320q90.jpg_.webp" /> -->
+
+      </view>
+    </navigator>
+  </view>
+</view>

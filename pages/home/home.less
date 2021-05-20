@@ -1,10 +1,15 @@
 // 主体页面
+page{
+  background-color: rgb(245, 245, 245);
+}
 .main-box {
+  // background-color: rgb(167, 164, 164);
  // 搜索框
  .searchbar {
  }
  // 轮播图
  .swiper {
+   margin-top: 1rpx;
   swiper {
    swiper-item {
     image {
@@ -16,22 +21,86 @@
  }
  // 可滑动分类区
  scroll-view {
-   margin-top: 10rpx;
+  margin-top: 5px;
    width: 100%;
    color: #999;
+   background-color: rgb(255, 255, 255);
    font-size: 14px;
   white-space: nowrap;
   .scrollview-item {
     display: inline-block;
+    margin-top: 5px;
     navigator{
       float: left;
       width: 80px;
-      height: 30px;
-      line-height: 30px;
+      height: 50rpx;
+      line-height: 50rpx;
       text-align: center
     }
   }
  }
+//  物品视图区
+ .goods{  // 第一层view
+  margin: 20rpx ;
+  // 圆角
+  border-radius: 8px;
+  background-color: white;
+  .goods_view{  //内部navigator
+    padding: 30rpx;
+    display: flex;
+    flex-direction: column;
+   .goods_view_top{ // 上层 商品名称、商品价格
+     display: flex;
+     color: black;
+     font-size: 18px;
+     .goods_view_top_goodsName{
+
+      flex-grow:7;
+     }
+     .goods_view_top_goodsPrice{
+      //  float: right;
+      text-align: right;
+      // background-color: orange;
+      color: red;
+      font-size: 20px;
+      flex-grow:1;
+     }
+   }
+   .goods_view_center{ //中间层 商品介绍
+     margin-top: 20rpx;
+    //  height: 20prx;
+    color: rgb(121, 120, 120);
+     flex: 1;
+     font-size: 14px;
+    //  background-color: yellowgreen;
+   }
+   .goods_view_bottom{//下层 商品图片
+     display: flex;
+     margin-top: 20rpx;
+      image{
+        border-radius: 8px;
+        // box-sizing: border-box;
+      }
+     image:nth-child(1){
+       width: 33%;
+      //  background-color: orange;
+       margin-right: 10rpx;
+     }
+     image:nth-child(2){
+      width: 33%;
+      // background-color: royalblue;
+      margin-right: 5rpx;
+      margin-left: 5rpx;
+     }
+     image:nth-child(3){
+      width: 33%;
+      // background-color: rebeccapurple;
+      margin-left: 10rpx;
+     }
+   }
+  }
+ }
+ 
 }
 .checked{
   color: black;

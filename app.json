@@ -1,8 +1,8 @@
 {
   "pages":[
+    "pages/mine/mine", 
     "pages/home/home",
     "pages/publish/publish", 
-    "pages/mine/mine", 
     "pages/logs/logs"
   ],
   "window":{
@@ -14,7 +14,7 @@
   "tabBar": {
     "color": "#8a8a8a",
     "selectedColor": "#ef1f04",
-    "backgroundColor": "",
+    "backgroundColor": "", 
     "position": "bottom",
     "borderStyle": "black",
     "list": [

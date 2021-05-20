@@ -18,31 +18,50 @@ Page({
       swiperImageId: 3,
       swiperImgUrl: 'https://www.hualigs.cn/image/60a53162e666c.jpg',
     }],
+    // 横向滑动导航条数据
     scrollViewList: [
       {
-        title_id: 1,
+        title_id: 0,
         title: '全部'
       }, {
-        title_id: 2,
+        title_id: 1,
         title: '数码'
       },
       {
-        title_id: 3,
+        title_id: 2,
         title: '学习'
       },
       {
-        title_id: 4,
+        title_id: 3,
         title: '生活'
       },
       {
-        title_id: 5,
+        title_id: 4,
         title: '衣物'
       },
       {
-        title_id: 6,
+        title_id: 5,
         title: '其他'
-      }]
+      }],
+    scrollCheckedId:0
   },
+
+  scrollchecked:function(e){
+    // console.log(e);
+    // this.setData({
+      var id = e.currentTarget.dataset.titleid
+      // this.data. =id
+      // })
+      // console.log(this);
+      console.log(id);
+      this.setData({
+        scrollCheckedId:id
+      })
+    console.log(this.data.scrollCheckedId);
+  },
+
+
+
 
   /**
    * 生命周期函数--监听页面加载
