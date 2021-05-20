@@ -5,14 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userinfo:{}
+    userinfo: {},
+    userListData: [{
+        userlist_id: 0,
+        userlist_name: '发布'
+      },
+      {
+        userlist_id: 1,
+        userlist_name: '收藏'
+      }
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
   },
 
   /**
@@ -26,11 +35,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-//  传值
-  this.setData({
-    // 通过const value = wxwx.getStorageSync('key') 获取到存储在数据缓存中的用户信息
-    userinfo:wx.getStorageSync('userinfo')
-  })
+    //  传值
+    this.setData({
+      // 通过const value = wxwx.getStorageSync('key') 获取到存储在数据缓存中的用户信息
+      userinfo: wx.getStorageSync('userinfo')
+    })
   },
 
   /**

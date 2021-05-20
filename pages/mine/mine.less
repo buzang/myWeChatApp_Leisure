@@ -1,12 +1,11 @@
 .mine_box {
-  height: 30vh;
+  
   // 虚化背景
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
 
-  .backgroundlucency {
-    position: fixed;
-    top: 0;
+  .backgroundlucency { // 背景
+    overflow: hidden;
     width: 100%;
     // 放大1.2倍
     transform: scale(1.2);
@@ -15,8 +14,8 @@
     z-index: 0;
   }
 
-  // 上层盒子： 头像/姓名
-  .mine_topBox {
+  //上层盒子
+  .mine_topBox { 
     position: absolute;
     // 置于上层
     top: 5vh;
@@ -25,8 +24,8 @@
     display: flex;
     align-items: center;
 
-    // 头像
-    .mine_topBox_head {
+   
+    .mine_topBox_head {  // 头像
       image {
         width: 18.5vh;
         height: 18.5vh;
@@ -38,11 +37,11 @@
       // background-color: red;
     }
 
-    // 用户信息
-    .mine_topBox_userinfo {
+    
+    .mine_topBox_userinfo { // 用户信息
 
-      // 用户名
-      .mine_topBox_name {
+      
+      .mine_topBox_name { // 用户名
         color: white;
         // background-color: yellow;
         font-weight: bold;
@@ -50,8 +49,8 @@
         font-size: 19px;
       }
 
-      // 海内存知己，天涯若比邻
-      .mine_topBox_slogan {
+      
+      .mine_topBox_slogan { // 海内存知己，天涯若比邻
         font-size: 24rpx;
         color: white;
         // font-weight: bold;
@@ -60,19 +59,16 @@
         margin-bottom: 10rpx;
       }
 
-      //  用户信息栏
-      .mine_topbox_genderOrRegion {
+      
+      .mine_topbox_genderOrRegion { //  用户信息栏
         margin-top: 10rpx;
         display: flex;
-        // 用户性别 icon
         align-items: center;
-
         // justify-content: center;
-        .mine_topBox_gender {
+        .mine_topBox_gender {  // 用户性别 icon
           display: flex;
           width: 80rpx;
           flex-direction: column;
-          // background-color: whitesmoke;
           border: 1px whitesmoke solid;
           background-color: whitesmoke;
           border-radius: 20rpx;
@@ -84,18 +80,14 @@
             width: 40rpx;
           }
         }
-        .chinainfo{
+        .chinainfo{  //中国icon
           border: 0px !important;
-          // background: rgba(0,0, 0, 0);
-          // margin-left: ;
           background:0 !important;
           width: 40rpx;
           margin-right: 5rpx !important;
           margin-left: 10rpx;
         }
-
-        // 用户地区
-        .mine_topbox_region {
+        .mine_topbox_region { // 用户地区
           display: flex;
           align-items: center;
           flex-direction: column;
@@ -105,20 +97,45 @@
           background-color: whitesmoke;
           background: rgba(rgb(245, 243, 243), 0.3);
           border-radius: 20rpx;
-          //  opacity: ;
           view {
-            // float: left;
             font-size: 24rpx;
             color: white;
             text-align: center;
             opacity: 1;
-            // font-weight: bold;
           }
         }
       }
     }
   }
+  // 未登录状态
+  .mine_topBox_Frame{
+    margin-top: -30rpx;
+    flex-direction: column !important;
+    align-items: center;
+    .mine_topBox_head_Franme{
+      flex: 1;
+    }
+    .mine_topBox_userinfo_Franme{
+      .btnLoginFrame{
+        width: 160rpx;
+        border: 1px white solid;
+        text-align: center;
+      }
+    }
+  }
 
-  // 下层盒子：我的收藏/我的发布
-  .mine_bottonBox {}
+
+
+  
+
+  
+  .mine_bottomBox {// 下层盒子：我的收藏/我的发布
+    
+    .mine_bottomBox_main{ // 下层主体盒子
+      
+      .mine_bottomBox_tabbar{// tabbar 
+        
+      }
+    }
+  }
 }

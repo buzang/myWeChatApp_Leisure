@@ -1,11 +1,8 @@
 .mine_box {
-  height: 30vh;
-  overflow: hidden;
   position: relative;
 }
 .mine_box .backgroundlucency {
-  position: fixed;
-  top: 0;
+  overflow: hidden;
   width: 100%;
   transform: scale(1.2);
   height: 30vh;
@@ -83,4 +80,17 @@
   color: white;
   text-align: center;
   opacity: 1;
+}
+.mine_box .mine_topBox_Frame {
+  margin-top: -30rpx;
+  flex-direction: column !important;
+  align-items: center;
+}
+.mine_box .mine_topBox_Frame .mine_topBox_head_Franme {
+  flex: 1;
+}
+.mine_box .mine_topBox_Frame .mine_topBox_userinfo_Franme .btnLoginFrame {
+  width: 160rpx;
+  border: 1px white solid;
+  text-align: center;
 }

@@ -1,6 +1,6 @@
 <view class="mine_box">
   <!-- 上层盒子 -->
-  <view class="mine_topBox">
+  <view class="mine_topBox" wx:if="{{userinfo!=''}}">
     <!-- 左侧-> 用户头像 -->
     <view class="mine_topBox_head">
       <image mode="center" src="{{userinfo.avatarUrl}}" />
@@ -8,7 +8,7 @@
     <!-- 右侧-> Userinfo展现栏 -->
     <view class="mine_topBox_userinfo">
       <!-- 上层-> 用户姓名 -->
-      <view class="mine_topBox_name">{{userinfo.nickName}}</view> 
+      <view class="mine_topBox_name">{{userinfo.nickName}}</view>
       <!-- 中间-> 海内存知己 天涯若比邻 -->
       <view class="mine_topBox_slogan">海内存知己 天涯若比邻</view>
       <!-- 下层-> 用户信息栏 -->
@@ -18,7 +18,7 @@
           <!-- man -->
           <image wx:if="{{userinfo.gender==1}}" mode="aspectFit" class="mine_topBox_genderIcon"
             src="../../images/icons/icon-man.png" />
-            <!-- weman -->
+          <!-- weman -->
           <image wx:elif="{{userinfo.gender==2}}" mode="aspectFit" class="mine_topBox_genderIcon"
             src="../../images/icons/icon-wuman.png" />
         </view>
@@ -27,21 +27,53 @@
           <image mode="aspectFit" class="mine_topBox_genderIcon" src="../../images/icons/china.png" />
         </view>
         <!-- 用户地区 ->省份 -->
-        <view class="mine_topbox_region">
+        <view class="mine_topbox_region" wx:if="{{userinfo.province!=''}}">
           <view>
             {{userinfo.province}}
           </view>
         </view>
-        <!-- 用户地区 ->地区 -->
-        <view class="mine_topbox_region">
+        <!-- 用户地区 ->城市 -->
+        <view class="mine_topbox_region" wx:if="{{userinfo.city!=''}}">
           <view>
             {{userinfo.city}}
+          </view>
+        </view>
+        <!-- 用户地区 ->地区 -->
+        <view class="mine_topbox_region" wx:if="{{userinfo.country!=''}}">
+          <view>
+            {{userinfo.country}}
           </view>
         </view>
       </view>
     </view>
   </view>
+<!-- 当用户未授权登陆时 显示此内容 -->
+  <view class="mine_topBox mine_topBox_Frame" wx:elif="{{userinfo==''}}">
+    <!-- 左侧-> 用户头像 -->
+    <view class="mine_topBox_head mine_topBox_head_Franme ">
+      <image mode="center" src="../../images/icons/anonymitypng.png" />
+    </view>
+    <!-- 右侧-> Userinfo展现栏 -->
+    <view class="mine_topBox_userinfo mine_topBox_userinfo_Franme ">
+      <!-- 中间-> 点击登录 -->
+      <navigator url="../login/login" class="btnLoginFrame">
+      <view class="mine_topBox_slogan ">
+        点击登录
+        </view>
+        </navigator>
+    </view>
+  </view>
+  <!--  -->
+  
   <!-- 虚化背景头像墙 -->
-  <image mode="scaleToFill" src="{{userinfo.avatarUrl}}" class="backgroundlucency"></image>
-  <view class="mine_bottonBox"></view>
+  <image mode="scaleToFill" wx:if="{{userinfo!=''}}" src="{{userinfo.avatarUrl}}"  class="backgroundlucency"></image>
+  <image mode="scaleToFill" wx:elif="{{userinfo==''}}" src="../../images/icons/anonymitypng.png"  class="backgroundlucency"></image>
+  <!-- <view class="mine_bottomBox"> -->
+    <!-- 主体盒子 -->
+    <!-- <view class="mine_bottomBox_main" wx:for="{{userListData}}" wx:key="userlist_id" > -->
+      <!-- <view class="mine_bottomBox_tabbar"> -->
+        <!-- <navigator>{{item.userlist_name}}</navigator> -->
+      <!-- </view> -->
+    <!-- </view> -->
+  <!-- </view> -->
 </view>
