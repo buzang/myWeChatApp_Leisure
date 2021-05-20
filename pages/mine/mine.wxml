@@ -1,2 +1,4 @@
-<!--pages/mine/mine.wxml-->
-<button type="primary" plain bindtap="handleGetUserInfo">登录</button>
+
+
+
+<navigator url="../login/login">登录</navigator>

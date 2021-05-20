@@ -1,4 +1,4 @@
-// pages/mine/mine.js
+// pages/login/login.js
 Page({
 
   /**
@@ -7,7 +7,31 @@ Page({
   data: {
 
   },
-
+  // 用户点击登录事件
+  handleGetUserInfo(e) {
+    wx.getUserProfile({
+        desc: 'desc',
+        success(res) {
+          console.log(res);
+          const userinfo = res.userInfo
+          console.log(userinfo);
+          wx.setStorageSync('userinfo', userinfo)
+          // 跳转回个人中心页
+          wx.navigateBack({
+            delta: 1,
+          })
+        },
+        fail(err) {
+          console.log(err);
+        }
+      })
+  },
+  // 用户点击拒绝授权事件
+  handleFailLogin(e){
+    wx.navigateBack({
+      delta: 1,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,0 +1,16 @@
+<!--pages/mine/mine.wxml-->
+<view class="login_centerBox">
+<image class="" src="../../Youxian/leisure-YouxianIcon(mini).png" mode="widthFix" />
+<view class="login_text">
+  <view >
+    有闲Leisure
+</view>
+<view>
+  没有卖不掉的货,只有数不尽的MONEY!
+</view>
+</view>
+  
+
+<button  plain bindtap="handleGetUserInfo" class="login_SuccessBtn">授权登录</button>
+<button class="login_failBtn" plain bindtap="handleFailLogin">拒绝授权</button>
+</view>

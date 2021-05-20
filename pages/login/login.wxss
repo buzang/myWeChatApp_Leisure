@@ -1,0 +1,30 @@
+.login_centerBox {
+  margin-top: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login_centerBox image {
+  width: 200rpx;
+}
+.login_centerBox .login_text {
+  text-align: center;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  color: #313131;
+  font-size: 18px;
+}
+.login_centerBox .login_text view:nth-child(2) {
+  margin-top: 5px;
+  font-size: 14px;
+}
+.login_centerBox .login_SuccessBtn {
+  background-color: #ef1f04;
+  border: 1px #ef1f04 solid;
+  color: white;
+}
+.login_centerBox .login_failBtn {
+  margin-top: 20px;
+  border: #ef1f04 1px solid;
+  color: #ef1f04;
+}
