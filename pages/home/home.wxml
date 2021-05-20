@@ -6,8 +6,8 @@
   <view class="swiper">
     <swiper indicator-dots="true" autoplay="true">
       <swiper-item wx:for="{{swiperList}}" wx:key="swiperImageId">
-        <navigator hover-class="btn-hover">
-          <image src="../../images/youxian.png" mode="widthFix" />
+        <navigator hover-class="btn-hover" url="../login/login">
+          <image src="../../images/youxian.png"  mode="widthFix" />
         </navigator>
       </swiper-item>
     </swiper>

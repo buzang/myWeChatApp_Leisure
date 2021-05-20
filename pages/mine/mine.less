@@ -1,0 +1,124 @@
+.mine_box {
+  height: 30vh;
+  // 虚化背景
+  overflow: hidden;
+  position: relative;
+
+  .backgroundlucency {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    // 放大1.2倍
+    transform: scale(1.2);
+    height: 30vh;
+    filter: blur(12px);
+    z-index: 0;
+  }
+
+  // 上层盒子： 头像/姓名
+  .mine_topBox {
+    position: absolute;
+    // 置于上层
+    top: 5vh;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+
+    // 头像
+    .mine_topBox_head {
+      image {
+        width: 18.5vh;
+        height: 18.5vh;
+        border-radius: 50%;
+        border: 3px white solid;
+        transform: scale(0.7);
+      }
+
+      // background-color: red;
+    }
+
+    // 用户信息
+    .mine_topBox_userinfo {
+
+      // 用户名
+      .mine_topBox_name {
+        color: white;
+        // background-color: yellow;
+        font-weight: bold;
+        font-family: "Microsoft YaHei";
+        font-size: 19px;
+      }
+
+      // 海内存知己，天涯若比邻
+      .mine_topBox_slogan {
+        font-size: 24rpx;
+        color: white;
+        // font-weight: bold;
+        font-family: "Microsoft YaHei";
+        margin-top: 10rpx;
+        margin-bottom: 10rpx;
+      }
+
+      //  用户信息栏
+      .mine_topbox_genderOrRegion {
+        margin-top: 10rpx;
+        display: flex;
+        // 用户性别 icon
+        align-items: center;
+
+        // justify-content: center;
+        .mine_topBox_gender {
+          display: flex;
+          width: 80rpx;
+          flex-direction: column;
+          // background-color: whitesmoke;
+          border: 1px whitesmoke solid;
+          background-color: whitesmoke;
+          border-radius: 20rpx;
+          align-items: center;
+          background: rgba(rgb(245, 243, 243), 0.4);
+          height: 40rpx;
+          .mine_topBox_genderIcon {
+            height: 40rpx;
+            width: 40rpx;
+          }
+        }
+        .chinainfo{
+          border: 0px !important;
+          // background: rgba(0,0, 0, 0);
+          // margin-left: ;
+          background:0 !important;
+          width: 40rpx;
+          margin-right: 5rpx !important;
+          margin-left: 10rpx;
+        }
+
+        // 用户地区
+        .mine_topbox_region {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          width: 100rpx;
+          margin-left: 10rpx;
+          border: 1px whitesmoke solid;
+          background-color: whitesmoke;
+          background: rgba(rgb(245, 243, 243), 0.3);
+          border-radius: 20rpx;
+          //  opacity: ;
+          view {
+            // float: left;
+            font-size: 24rpx;
+            color: white;
+            text-align: center;
+            opacity: 1;
+            // font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  // 下层盒子：我的收藏/我的发布
+  .mine_bottonBox {}
+}

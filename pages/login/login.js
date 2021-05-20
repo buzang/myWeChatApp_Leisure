@@ -10,11 +10,12 @@ Page({
   // 用户点击登录事件
   handleGetUserInfo(e) {
     wx.getUserProfile({
+      lang:'zh_CN',
         desc: 'desc',
         success(res) {
-          console.log(res);
+          // console.log(res);
           const userinfo = res.userInfo
-          console.log(userinfo);
+          // console.log(userinfo);
           wx.setStorageSync('userinfo', userinfo)
           // 跳转回个人中心页
           wx.navigateBack({

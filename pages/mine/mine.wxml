@@ -1,4 +1,47 @@
-
-
-
-<navigator url="../login/login">登录</navigator>
+<view class="mine_box">
+  <!-- 上层盒子 -->
+  <view class="mine_topBox">
+    <!-- 左侧-> 用户头像 -->
+    <view class="mine_topBox_head">
+      <image mode="center" src="{{userinfo.avatarUrl}}" />
+    </view>
+    <!-- 右侧-> Userinfo展现栏 -->
+    <view class="mine_topBox_userinfo">
+      <!-- 上层-> 用户姓名 -->
+      <view class="mine_topBox_name">{{userinfo.nickName}}</view> 
+      <!-- 中间-> 海内存知己 天涯若比邻 -->
+      <view class="mine_topBox_slogan">海内存知己 天涯若比邻</view>
+      <!-- 下层-> 用户信息栏 -->
+      <view class="mine_topbox_genderOrRegion">
+        <!-- 用户性别icon -->
+        <view class="mine_topBox_gender">
+          <!-- man -->
+          <image wx:if="{{userinfo.gender==1}}" mode="aspectFit" class="mine_topBox_genderIcon"
+            src="../../images/icons/icon-man.png" />
+            <!-- weman -->
+          <image wx:elif="{{userinfo.gender==2}}" mode="aspectFit" class="mine_topBox_genderIcon"
+            src="../../images/icons/icon-wuman.png" />
+        </view>
+        <!-- china图标 -->
+        <view class="mine_topBox_gender chinainfo" wx:if="{{userinfo.country=='中国'}}">
+          <image mode="aspectFit" class="mine_topBox_genderIcon" src="../../images/icons/china.png" />
+        </view>
+        <!-- 用户地区 ->省份 -->
+        <view class="mine_topbox_region">
+          <view>
+            {{userinfo.province}}
+          </view>
+        </view>
+        <!-- 用户地区 ->地区 -->
+        <view class="mine_topbox_region">
+          <view>
+            {{userinfo.city}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 虚化背景头像墙 -->
+  <image mode="scaleToFill" src="{{userinfo.avatarUrl}}" class="backgroundlucency"></image>
+  <view class="mine_bottonBox"></view>
+</view>

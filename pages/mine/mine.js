@@ -5,14 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userinfo:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -26,7 +26,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+//  传值
+  this.setData({
+    // 通过const value = wxwx.getStorageSync('key') 获取到存储在数据缓存中的用户信息
+    userinfo:wx.getStorageSync('userinfo')
+  })
   },
 
   /**
