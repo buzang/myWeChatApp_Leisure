@@ -7,7 +7,20 @@ Page({
   data: {
 
   },
-
+  handleGetUserInfo(e) {
+    wx.getUserProfile({
+      desc: 'desc',
+      success(res){
+        console.log(res);
+        const userinfo =  res.userInfo
+        console.log(userinfo);
+        wx.setStorageSync('userinfo', userinfo)
+      },
+      fail(err){
+        console.log(err);
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
