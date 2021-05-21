@@ -11,12 +11,13 @@
   text-align: center;
   margin-top: 6px;
   margin-bottom: 20px;
-  color: #313131;
+  color: #616161;
+  font-weight: bold;
   font-size: 18px;
 }
 .login_centerBox .login_text view:nth-child(2) {
   margin-top: 5px;
-  font-size: 14px;
+  font-size: 12px;
 }
 .login_centerBox .login_SuccessBtn {
   background-color: #ef1f04;
