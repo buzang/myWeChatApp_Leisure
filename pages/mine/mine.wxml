@@ -94,13 +94,13 @@
 							<!-- 下层->价格和时间 -->
 							<view class="content_title_brief_priceOrDate">
 								<!-- 左侧->价格 -->
-								<text class="content_title_brief_price">
+								<view class="content_title_brief_price">
                   ￥{{item.price}}
-                  </text>
+                  </view>
 								<!-- 右侧->时间 -->
-								<text class="content_title_brief_date">
+								<view class="content_title_brief_date">
                     {{item.published_date}}
-                  </text>
+                  </view>
 							</view>
 						</view>
 					</navigator>

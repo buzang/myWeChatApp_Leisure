@@ -143,10 +143,6 @@
   }
 
 
-
-
-
-
   .mine_bottomBox {
     // 下层盒子：我的收藏/我的发布
     margin-top: -50rpx;
@@ -194,7 +190,7 @@
            margin-left: 10rpx;
            margin-right: 10rpx;
            margin-bottom: 20rpx;
-          width: 348rpx;
+          width: 343rpx;
           height: 400rpx;
            background-color: rgb(255, 255, 255);
           //  阴影
@@ -203,7 +199,7 @@
           box-sizing: border-box;
           overflow: hidden;
            .mine_bottomBox_conten_item_box{  //单个内容框
-            
+            height: 400rpx;
               .content_image{//上部分->图片
                 width: 100%;
                 overflow: hidden;
@@ -215,15 +211,30 @@
                
               }
               .content_title_brief{//下部分->介绍
+                margin-left: 15rpx;
+                margin-right: 15rpx;
+                margin-bottom: 15rpx;
                   .content_title_brief_title{// 上层->标题
                     
                   }
                   .content_title_brief_priceOrDate{ //下层-> 价格和时间
-                    .content_title_brief_price{ //左侧 价格
+                    display: flex;
+                    justify-content: space-between;
+                    
+                    view{// 价格和日期 共同属性
+                      margin-top: 25rpx;
+                      
+                      height: 40rpx;
+                      line-height: 40rpx;
+                    }
 
+                    .content_title_brief_price{ //左侧 价格
+                      font-size: 30rpx;
+                      color: var(--themenColor);
                     }
                     .content_title_brief_date{ //右侧 时间
-
+                      font-size: 20rpx;
+                      color: rgb(197, 197, 197);
                     }
                   }
               }
