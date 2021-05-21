@@ -70,14 +70,42 @@
 	<view class="mine_bottomBox">
 		<!-- 主体盒子 -->
 		<view class="mine_bottomBox_main">
-			<view class="mine_bottomBox_tabbar " >
+			<!-- 上部分导航区 -->
+			<view class="mine_bottomBox_tabbar ">
 				<view class="mine_bottomBox_title" wx:for="{{userListData}}" wx:key="userlist_id">
 					<navigator hover-class="btn-hover" class="{{index==mineTabbar_id? 'checked':''}}" bindtap="handlegetMineList" data-titleid="{{index}}">{{item.userlist_name}}</navigator>
 				</view>
 			</view>
-      <view>
-        1
-       </view> 
+			<!-- 下部分内容区 -->
+			<view class="mine_bottomBox_content">
+				<!-- 每一项 -->
+				<view class="mine_bottomBox_content_item" wx:for="{{contentListData}}" wx:key="published_id">
+					<navigator class="mine_bottomBox_conten_item_box">
+						<!-- 上层->图片部分 -->
+						<view class="content_image">
+							<image class="" src="{{item.published_imgUrl}}" />
+						</view>
+						<!-- 下层->内容部分 -->
+						<view class="content_title_brief">
+							<!-- 上层->标题 -->
+							<view class="content_title_brief_title">
+              {{item.published_title}}
+							</view>
+							<!-- 下层->价格和时间 -->
+							<view class="content_title_brief_priceOrDate">
+								<!-- 左侧->价格 -->
+								<text class="content_title_brief_price">
+                  ￥{{item.price}}
+                  </text>
+								<!-- 右侧->时间 -->
+								<text class="content_title_brief_date">
+                    {{item.published_date}}
+                  </text>
+							</view>
+						</view>
+					</navigator>
+				</view>
+			</view>
 		</view>
 	</view>
 </view>

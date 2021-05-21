@@ -17,6 +17,29 @@ Page({
                 userlist_name: '收藏'
             }
         ],
+        // content数据模型
+        contentListData: [{
+                published_id: 0,
+                published_imgUrl: '//gw.alicdn.com/bao/uploaded/i2/2249285408/O1CN01VORgHD1pouZfT2OxK_!!0-item_pic.jpg_320x320q90.jpg_.webp',
+                price: 3000,
+                published_title: '闲置叉子',
+                published_date: '2021-05-03'
+            },
+            {
+                published_id: 1,
+                published_imgUrl: '//gw.alicdn.com/bao/uploaded/i2/2249285408/O1CN01VORgHD1pouZfT2OxK_!!0-item_pic.jpg_320x320q90.jpg_.webp',
+                price: 1500,
+                published_title: '闲置瓷碗',
+                published_date: '2021-05-04'
+            },
+            {
+                published_id: 2,
+                published_imgUrl: '//gw.alicdn.com/bao/uploaded/i2/2249285408/O1CN01VORgHD1pouZfT2OxK_!!0-item_pic.jpg_320x320q90.jpg_.webp',
+                price: 1600,
+                published_title: '闲置瓜皮',
+                published_date: '2021-05-06'
+            }
+        ],
         mineTabbar_id: 0
     },
     // 导航栏按钮 发布，收藏
